@@ -12,7 +12,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("/storage/emulated/0/Download/adi-goldstein-Hli3R6LKibo-unsplash.jpg");
+  background: url("balloon.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: black;
