@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Happy Birthday!</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes rotateIn {
+      from {
+        transform: rotate(-360deg);
+        opacity: 0;
+      }
+      to {
+        transform: rotate(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounceIn {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: #ff69b4;
+      }
+      50% {
+        background-color: #ff1493;
+      }
+      100% {
+        background-color: #ff69b4;
+      }
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+
+    body {
+      background-color: purple;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .container {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      margin: 10% auto;
+      box-shadow: 0px 0px 25px;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    h1, h2 {
+      color: white;
+    }
+
+    .birthday-video {
+      width: 300px;
+      height: 300px;
+      border-radius: 0px;
+      box-shadow: 4px 4px 10px;
+      animation: rotateIn 2s ease-in-out;
+    }
+
+    .banner {
+      background-color: pink;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      animation: bounceIn 5s ease-out, colorChange 4s infinite;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      animation: fadeIn 3s ease-in;
+    }
+
+    .shower {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      animation: fall 5s linear infinite;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="banner">Happy Birthday!</div>
+    <video class="birthday-video embed-responsive-item" controls poster="/storage/emulated/0/Pictures/e616051c634a86eeff3e869f33eaf191.jpg">
+      <source src="/storage/emulated/0/Movies/inshot/birth.mp4" type="video/mp4">
+    </video>
+    <div class="footer">Wishing you all the best on your special day! </div>
+  </div>
+
+  <!-- Confetti elements -->
+  <div class="shower" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="shower" style="left: 20%; animation-delay: 0.5s;"></div>
+  <div class="shower" style="left: 30%; animation-delay: 1s;"></div>
+  <div class="shower" style="left: 40%; animation-delay: 1.5s;"></div>
+  <div class="shower" style="left: 50%; animation-delay: 2s;"></div>
+  <div class="shower" style="left: 60%; animation-delay: 2.5s;"></div>
+  <div class="shower" style="left: 70%; animation-delay: 3s;"></div>
+  <div class="shower" style="left: 80%; animation-delay: 3.5s;"></div>
+  <div class="shower" style="left: 90%; animation-delay: 4s;"></div>
+
+</body>
+</html>
