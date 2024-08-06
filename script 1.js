@@ -2,15 +2,15 @@ const days = document.querySelector("#days");
 const hours = document.querySelector("#hours");
 const minutes = document.querySelector("#min");
 const seconds = document.querySelector("#sec");
-const currentDateInput = new Date(localStorage.getItem('currentDate'));
-const DateofeventInput = new Date(localStorage.getItem('Dateofevent'));
+//const currentDateInput = new Date(localStorage.getItem('currentDate'));
+//const DateofeventInput = new Date(localStorage.getItem('Dateofevent'));
 
 function refresh() {
-   // const currentYear = new Date().getFullYear();
-    // const newYear = new Date(`September 4, ${currentYear} 00:00:00`);
+    const currentYear = new Date().getFullYear();
+     const newYear = new Date(`September 4, ${currentYear} 00:00:00`);
     const currentDate = new Date();
-    //const diff = newYear - currentDate
-    const diff = DateofeventInput - currentDate;
+    const diff = newYear - currentDate
+    //const diff = DateofeventInput - currentDate;
 
 if (diff <= 0) {
         clearInterval(countdownInterval);
