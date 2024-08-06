@@ -3,81 +3,65 @@
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <title>Happy Birthday!</title>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
     @keyframes fadeIn {
-      from {
-        opacity: 0;
+      
+      from{ opacity: 0;
+        
       }
-      to {
-        opacity: 1;
+      
+      to{ opacity: 1; 
+        
       }
     }
 
     @keyframes slideIn {
-      from {
-        transform: translateY(-50px);
-        opacity: 0;
+      from { transform: translateY(-50px); opacity: 0; 
+        
       }
-      to {
-        transform: translateY(0);
-        opacity: 1;
+      to { transform: translateY(0); opacity: 1; 
+        
       }
     }
 
     @keyframes rotateIn {
-      from {
-        transform: rotate(-360deg);
-        opacity: 0;
+      from { transform: rotate(-360deg); opacity: 0; 
+        
       }
-      to {
-        transform: rotate(0);
-        opacity: 1;
+      to { transform: rotate(0); opacity: 1; 
+        
       }
     }
 
     @keyframes bounceIn {
-      from {
-        transform: scale(0.5);
-        opacity: 0;
+      from { transform: scale(0.5); opacity: 0; 
+        
       }
-      to {
-        transform: scale(1);
-        opacity: 1;
+      to { transform: scale(1); opacity: 1;
+        
       }
     }
 
     @keyframes colorChange {
-      0% {
-        background-color: #ff69b4;
-      }
-      50% {
-        background-color: #ff1493;
-      }
-      100% {
-        background-color: #ff69b4;
-      }
+      0% { background-color: #ff69b4; }
+      50% { background-color: #ff1493; }
+      100% { background-color: #ff69b4; }
     }
 
     @keyframes fall {
-      0% {
-        transform: translateY(-100px) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
     }
 
-
     body {
-      background-color: purple;
+      background-color: #6a0dad; /* Change to a darker purple for better contrast */
       font-family: 'Arial', sans-serif;
       text-align: center;
       color: white;
       padding: 20px;
       animation: fadeIn 2s ease-in;
+      overflow:hidden;
     }
 
     .container {
@@ -88,7 +72,7 @@
       width: 90%;
       max-width: 600px;
       margin: 10% auto;
-      box-shadow: 0px 0px 25px;
+      box-shadow: 0px 0px 25px ;
       animation: slideIn 1.5s ease-in-out;
     }
 
@@ -97,10 +81,9 @@
     }
 
     .birthday-video {
-      width: 300px;
-      height: 300px;
-      border-radius: 0px;
-      box-shadow: 4px 4px 10px;
+      width: 100%;
+      border-radius: 10px; 
+      box-shadow: 4px 4px 10px black;
       animation: rotateIn 2s ease-in-out;
     }
 
@@ -112,7 +95,7 @@
       margin-bottom: 20px;
       font-size: 24px;
       font-weight: bold;
-      animation: bounceIn 5s ease-out, colorChange 4s infinite;
+      animation: bounceIn 1s ease-out, colorChange 4s infinite;
     }
 
     .footer {
@@ -126,22 +109,31 @@
       width: 10px;
       height: 10px;
       background-color: white;
-      animation: fall 5s linear infinite;
+      animation: fall 3s linear infinite;
+      border-radius: 50%; 
     }
 
+    .shower:nth-child(odd) {
+      background-color: #ff69b4; 
+    }
+
+    .shower:nth-child(even) {
+      background-color: #ff1493; 
+    }
 
   </style>
 </head>
 <body>
   <div class="container">
     <div class="banner">Happy Birthday!</div>
-    <video class="birthday-video embed-responsive-item" controls poster="gift.jpg">
-      <source src="video.mp4" type="video/mp4">
+    <video class="birthday-video embed-responsive-item" controls poster="/storage/emulated/0/Pictures/e616051c634a86eeff3e869f33eaf191.jpg" alt="Birthday Celebration">
+      <source src="/storage/emulated/0/countdown surprise/video.mp4" type="video/mp4">
     </video>
-    <div class="footer">Wishing you all the best on your special day! </div>
+    <div class="footer">Wishing you all the best on your special day!</div><br>
+    <a href="video2.html"class="btn btn-primary">NEXT</a>
   </div>
 
-  <!-- Confetti elements -->
+ 
   <div class="shower" style="left: 10%; animation-delay: 0s;"></div>
   <div class="shower" style="left: 20%; animation-delay: 0.5s;"></div>
   <div class="shower" style="left: 30%; animation-delay: 1s;"></div>
@@ -152,5 +144,5 @@
   <div class="shower" style="left: 80%; animation-delay: 3.5s;"></div>
   <div class="shower" style="left: 90%; animation-delay: 4s;"></div>
 
-</body>
+  </body>
 </html>
