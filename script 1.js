@@ -6,7 +6,7 @@ const currentDateInput = new Date(localStorage.getItem('currentDate'));
 const DateofeventInput = new Date(localStorage.getItem('Dateofevent'));
 
 function refresh() {
-    const currentYear = new Date().getFullYear();
+   // const currentYear = new Date().getFullYear();
     // const newYear = new Date(`September 4, ${currentYear} 00:00:00`);
     const currentDate = new Date();
     //const diff = newYear - currentDate
